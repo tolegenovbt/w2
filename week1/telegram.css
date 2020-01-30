@@ -1,0 +1,149 @@
+body{
+    background-color:rgb(231, 235, 240);
+}
+#blue-part {
+    background-color:rgb(86,130,163);
+    height: 226px;
+    margin: -10px -10px 0 -10px;
+    box-sizing: border-box;
+  }
+  
+.login-page{
+    background-color: white;
+    margin: -131px auto 90px auto;
+    width: 404px;
+}
+.top{
+    background-color: rgb(86,130,163);
+    height: 60px;
+}
+.top a {
+    
+    font-size: 13px;
+    font-weight: 500px;
+    color: white;
+    text-decoration: none;
+}
+.link_1{
+    width: 110;
+    height: auto;
+    padding: auto;
+    margin-bottom: 0;
+}
+.link_2{
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 700;
+    width: 50px;
+    height: 20px;
+    padding: auto;
+    margin-left: 250px;
+}
+.telegram_icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.telegram_img {
+    width: 62px;
+    height: 14px;
+}
+.strelka{
+    width: 7px;
+    height: 12px;
+}
+.mid{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: -0.5px;
+    height: 250px;
+    border-radius: 10%;
+    margin: 0;
+    padding: 44px 65px 44px 65px;
+}
+.sign_in{
+    font-size: 16px;
+    margin-top: 0;
+}
+.p1{
+    font-size: 13px;
+    font-weight: 400px;
+    opacity: 50%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.bot{
+    
+    background-color:rgb(231, 235, 240);
+    height: 42;
+}
+.form_1
+{
+    margin-bottom: 22px;
+}
+
+.country ,.code{
+    font-size: 13px;
+    font-weight: 400px;
+    opacity: 50%; 
+}
+
+/* .form_2 input[type="tel"]{
+    margin: 6px 0 0 5px;
+    border: none;
+    
+} */
+.form_code{
+    width: 50px;
+    margin-right: 0;
+}
+.select
+{
+    width: 274px;
+    border-color: rgba(0,0,0,0.1);
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    padding-bottom: 10px;
+}
+.undercode{
+    width: inherit;
+    padding-bottom: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin: 6px 0 0 0px;
+}
+#rrr{
+    color:rgb(240, 237, 243);
+}
+#telephone_number{
+    opacity: inherit;
+    letter-spacing: inherit;
+    position: relative;
+    left: 70px;
+    bottom: 34px;
+    font-size: 15px;
+    padding-bottom: 10px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+}
+.bot{
+    font-family: sans-serif;
+    padding-top: 25px;
+    color: rgb(86,130,163);
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+}
+.text{
+    opacity: 70%;
+}
+.link_last a{
+    font-weight: 100px;
+    text-decoration: none;
+    border-bottom: 0px;
+    color: rgb(86,130,163);
+}

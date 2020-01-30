@@ -1,0 +1,224 @@
+.body
+{
+    font-family: sans-serif;
+}
+.top
+{
+    height: 83px;
+    margin: -10px -10px 0 -10px;
+    color: white;
+    background-color: rgb(59,89,152);
+    padding-top: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.facebook_title
+{
+    width: 170px;
+    position: relative;
+    left: 300px;
+    top: 20px;
+}
+.sign_in
+{
+    position: relative;
+    left: 827px;
+    top: -31px;
+}
+.password_label
+{
+    margin-left: 10px;
+}
+.password
+{
+    margin-left: 75px;
+}
+/* .login_label, .password_label
+{
+    margin-bottom: 5px;
+} */
+#enter
+{
+    color: white;
+    background-color: rgb(75, 111, 189);
+    border-color: rgb(40, 76, 153);
+}
+/* .top .part_1 */
+/* {
+    position: relative;
+    /* left: 700px; */
+/* } */
+/* .top .part_2
+{
+    position: relative;
+    left: 245px;
+    top: -37px;
+} */ 
+.forgot
+{
+    
+    color: #9cb4d8;
+    text-decoration: none;
+}
+.forgot_label
+{
+    margin-top: 5px;
+    margin-left: 245px;
+}
+/* .mid
+{
+    background-color: rgb(230,232,242);
+} */
+.gradient{
+    right: 0;
+    left: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+    background-image: linear-gradient(white, rgb(211, 216, 232));
+}
+.gradient_content
+{
+    margin: 0px 26px 0px 300px;
+}
+.planet
+{
+    width: 536px;
+    height: 194px;
+}
+.mid .left .p
+{
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    word-spacing: -1px;
+    letter-spacing: -0.2px;
+    width: 490px;
+    opacity: 0.78;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mid .right
+{
+    margin-left: 585px;
+    margin-top: -265px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mid .right .registration
+{
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 36px;
+    opacity: 0.78;
+    margin-bottom: 5px;
+}
+.mid .right .fast_and_easy
+{
+    font-family: inherit;
+    font-size: 19px;
+    opacity: 0.78;
+    margin-bottom: 20px;
+}
+.mid .right input 
+{
+    border-radius: 5px;
+    display: inline-block;
+    
+}
+.mid .right .surname
+{
+    margin-left: 5px;
+}
+.name, .surname, .mid .right .email_or_number_input
+{
+    font-size: 17px;
+    opacity: 0.6;
+    color: white;
+    padding-left: 5px;
+
+}
+.mid .right .fullname input
+{
+    width: 194px;
+    height: 39px;
+}
+.mid .right .email_or_number_input
+{
+    width: 400px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.control-group
+{
+    margin-top: 10px;
+}
+.label-dob
+{
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0.5;
+}
+.controls
+{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#dob-day, #dob-year
+{
+    margin-left: 0;
+    height: 30px;
+    width: 72px;
+}
+#dob-month
+{
+    margin-left: 0;
+    margin-right: 0;
+    height: 30px;
+    width: 82px;
+}
+#sex-label
+{
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0.5;
+}
+#conf_pol_dec
+{
+    font-size: 11px;
+    width: 330px;
+    text-align: left;
+    opacity: 0.7;
+}
+#conf_pol
+{
+    text-decoration: none;
+    color: rgb(59,89,152);
+}
+#registration_button
+{
+    margin-top: 10px;
+    color: white;
+    background-color: rgb(106,165,80);
+    height: 40px;
+    width: 200px;
+    border-radius: 4%;
+    font-size: 19px;
+    font-weight: bold;
+    border-color: rgb(106,165,80);
+}
+#create_celebrity
+{
+    margin-top: 30px;
+    font-size: 15px;
+    width: 400px;
+    padding-bottom: 30px;
+}
+#create_account
+{
+    text-decoration: none;
+    color: rgb(59,89,152);
+}
+.bot img
+{
+    width: 1000px;
+    height: auto;
+    margin-left: 270px;
+}

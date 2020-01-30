@@ -1,0 +1,115 @@
+body
+{
+    background-color: rgb(250,250,250);
+}
+.smartphones_img
+{
+    position: relative;
+    width: 454px;
+    top: 120px;
+    left: 370px;
+}
+.quadrangle
+{
+    border: 1px solid rgb(230,230,230);
+    background-color: white;
+    position: relative;
+    width: 350px;
+    left: 808px;
+    bottom: 590px; 
+}
+#instagram_title
+{
+    width: 175px;
+    margin-left: 25%;
+    margin-top: 7%;
+    text-align: center;
+}
+.main_part
+{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 270px;
+    margin-left: 12%;
+}
+#offer_p
+{
+    text-align: center;
+    opacity: 40%;
+    font-size: 16px;
+}
+.plug_facebook_button
+{
+    width: 270px;
+    height: 31.3px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(56,151,240);
+}
+.plug_facebook_button text
+{
+    margin-left: 3px;
+}
+.lines 
+{
+    width: 270px;
+}
+.lines p
+{
+    width: 270px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 40%;
+    font-size: 16px;
+}
+.inputs
+{
+    width: 270px;
+}
+.inputs input
+{
+    /* font-family: ; */
+    border-radius: 2px;
+    border: 0.5px solid rgb(192, 183, 183) ;
+    background-color: rgb(250,250,250);
+    font-size: 12px;
+    margin-top: 5px;
+    width: 270px;
+    height: 38px;
+    padding-left: 7px;
+}
+.password
+{
+    margin-bottom: 15px;
+}
+#conf_pol
+{
+    color: grey;
+    width: 230px;
+    font-weight: normal;
+    text-align: center;
+    opacity: 80%;
+    font-size: 14px;
+    margin-left: 22px;
+    margin-bottom: 43px;
+}
+#conf_pol a
+{
+    color: grey;
+    font-weight: bold;
+    opacity: 100%;
+    text-decoration: none;
+}
+.blind_div
+{
+    height: 10px;
+    background-color: rgb(250,250,250);
+    width: 350px;
+    border-left: 0;
+    border-right: 0;
+}
+/* .inputs input text
+{
+    margin-left: 10px;
+} */
