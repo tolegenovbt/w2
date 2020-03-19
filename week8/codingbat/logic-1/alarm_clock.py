@@ -1,4 +1,12 @@
 def alarm_clock(day, vacation):
-    week_preset = "7:00" if not vacation else "10:00"
-    weekend_preset = "10:00" if not vacation else "off"
-    return week_preset if day not in [6, 0] else weekend_preset
+  if not vacation:
+    if day == 0 or day == 6:
+      return "10:00"
+    else:
+      return "7:00"
+  else:
+    if day == 0 or day == 6:
+      return "off"
+    else:
+      return "10:00"
+
