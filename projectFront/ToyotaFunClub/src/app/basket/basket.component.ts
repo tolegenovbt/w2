@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BasketService } from '../basket.service';
+import { Cars } from '../cars';
 
 @Component({
   selector: 'app-basket',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasketComponent implements OnInit {
 
-  constructor() { }
+  carsFromBasket: Cars[] = [];
+
+  constructor(private basketService: BasketService) { }
 
   ngOnInit(): void {
+    this.getCarsFromBasket()
   }
 
+  getCarsFromBasket(): void {
+    this.basketService.getCarsFromBasket().subscribe( cars => this.carsFromBasket = cars)
+  }
+
+  deleteCarsFromBasket(cars: Cars) {
+    this.basketService.deleteCarsFromBasket(cars)
+  }
 }

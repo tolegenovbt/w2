@@ -10,9 +10,15 @@ import { ModelsService } from '../models.service';
 })
 export class ModelsComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private modelsService: ModelsService) { }
+
+  models: Model[]
 
   ngOnInit(): void {
+    this.getModels()
   }
 
+  getModels(): void {
+    this.modelsService.getModels().subscribe( models => this.models = models)
+  }
 }
