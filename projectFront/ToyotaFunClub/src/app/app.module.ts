@@ -9,6 +9,11 @@ import { HomeComponent } from './home/home.component';
 import { RoutingComponent } from './routing/routing.component';
 import { CarsDetailComponent } from './cars-detail/cars-detail.component';
 import { BasketComponent } from './basket/basket.component';
+import { CarComponent } from './car/car.component';
+import { ModelsDetailComponent } from './models-detail/models-detail.component';
+import { LoginComponent } from './login/login.component';
+import { ProductServiceComponent } from './product-service/product-service.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { BasketComponent } from './basket/basket.component';
     HomeComponent,
     RoutingComponent,
     CarsDetailComponent,
-    BasketComponent
+    BasketComponent,
+    CarComponent,
+    ModelsDetailComponent,
+    LoginComponent,
+    ProductServiceComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

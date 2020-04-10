@@ -24,4 +24,9 @@ export class BasketComponent implements OnInit {
   deleteCarsFromBasket(cars: Cars) {
     this.basketService.deleteCarsFromBasket(cars)
   }
+  buyCarsFromBasket(cars: Cars)
+  {
+    this.basketService.deleteCarsFromBasket(cars)
+    window.alert('Congratulations!!! You are now Toyota car owner!')
+  }
 }

@@ -27,6 +27,7 @@ export class CarsListComponent implements OnInit {
 
   onAddToBasket(cars: Cars): void {
     this.basketService.addCarsToBasket(cars)
+    window.alert('Added to the basket!')
   }
 
   onSelect(cars: Cars): void{
