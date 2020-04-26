@@ -13,8 +13,6 @@ urlpatterns = [
     path('basket/cars/', cars_of_basket),
     path('basket/cars/<int:pk>/', CarsInBasket.as_view()),
     path('models/', ModelsListAPIView.as_view()),
-    # path('clothes', ClothesListAPIView.as_view()),
     path('cars/<int:id>/', carsByModel),
-    path('models/<int:id>/', model),
-    # path('clothes/new', newCarsList.as_view()),
+    path('models/<int:id>/', model)
 ]

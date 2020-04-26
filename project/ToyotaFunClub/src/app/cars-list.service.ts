@@ -22,7 +22,7 @@ export class CarsListService {
   }
 
   getCarsByModel(id: number): Observable<Car[]> {
-    return this.http.get<Car[]>(`http://127.0.0.1:8000/api/categories/${id}/cars/`);
+    return this.http.get<Car[]>(`http://127.0.0.1:8000/api/models/${id}/cars/`);
   }
 
   getModelName(id: number): Observable<any> {

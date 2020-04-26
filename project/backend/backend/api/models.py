@@ -35,11 +35,6 @@ class Model(models.Model):
         }
 
 
-class newClothesManager(models.Manager):
-    def get_new_clothes(self):
-        return super(newClothesManager, self).get_queryset().filter(new=True)
-
-
 class Car(models.Model):
     name = models.CharField(max_length=500, default='')
     imageLink = models.TextField(default='')
@@ -48,15 +43,13 @@ class Car(models.Model):
     new = models.BooleanField(default=True)
     model = models.ForeignKey(Model, on_delete=models.CASCADE, default=1)
 
-    objects = newClothesManager()
-
     def to_json(self):
         return {
             'id': self.id,
             'imageLink': self.imageLink,
             'price': self.price,
             'description': self.description,
-            'model': self.model.id,
+            'model': self.model.id
         }
 
 
