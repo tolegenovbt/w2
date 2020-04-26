@@ -1,10 +1,102 @@
-.bck-img
+
+
+.bg-img
 {
-    min-height: 100vh;
+    min-height: 60vh;
     width: 100%;
     background-image: url('https://w-dog.ru/wallpapers/0/7/475455960336780.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: rgba(0,0,0,.5);
+    background-blend-mode: darken;
+    margin-bottom: 20px ;
+
+
+}
+
+
+.all{
+  /* min-height: 200vh; */
+  width: 100%;
+}
+
+.gallery {
+  padding: 3.5em;
+  position: relative;
+  overflow: hidden;
+  min-height: 37em;
+}
+
+.gallery header {
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+  .gallery header.special {
+    justify-content: center;
+  }
+
+
+  .gallery footer {
+    text-align: center;
+    margin-top: 4em;
+  }
+
+  .gallery .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+
+
+   .gallery .content .media img {
+      transition: transform 0.2s ease-in-out;
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+
+     .gallery .content .media:hover img {
+      transform: scale(1.075);
+    }
+
+h2{
+  color: teal;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.galbtn{
+    padding: 15px 25px;
+    border: none;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.8)!important;
+    color: #000;
+}
+
+.galbtn a{
+  color: #000!important;
+  font-size: 30px!important;
+  font-weight: 100!important;
+}
+
+.galbtn a:hover{
+  transition: .5s;
+  padding: 30px;
+  background: teal;
+  color: #fff!important;
+  border-radius:20px ;
+}
+
+.galbtn a{
+  text-decoration: none;
+  color: #ddd;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: medium;
 }

@@ -1,0 +1,39 @@
+<div class="all">
+  <div class = "definition">
+      <h2>Add Photo</h2>
+      <p>Photography is the art, application and practice of creating durable images
+      by recording light or other electromagnetic radiation, either
+      electronically by means of an image sensor, or chemically by means of
+      a light-sensitive material such as photographic film. </p>
+  </div>
+  <hr class="divide">
+<div class="page">
+    <div class="wrapper">
+        <div class="container">
+            <div class="form-data">
+                <form action="">
+                    <div class="username">
+                     <label>Photo name:<input #photoName  type="text"></label>
+                    </div>
+                    <div class="password">
+                        <label>Discription:<input #photoDiscription type="text"></label>
+                    </div>
+                    <div class="password">
+                        <label>Price:<input #photoPrice type="text"></label>
+                    </div>
+                    <div class="password">
+                        <label>Image:<input #photoImage type="file" accept="image" ></label>
+                    </div>
+
+                    <button (click)="add(photoName.value, photoDiscription.value, photoPrice.value, photoImage.value); photoName.value=''; photoDiscription.value='';
+                    photoPrice.value=''; photoImage.value='';"
+                        class="github-btn">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="image">
+              <a href="../../images/10.jpg"></a>
+          </div>
+</div>
+</div>

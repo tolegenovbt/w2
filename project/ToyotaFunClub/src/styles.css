@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 h1, h2 {
-    color: #A65900;
+    color: cadetblue;
 }
 p {
-    color: #034769;
+    color: rosybrown;
+}
+
+*{
+  margin: 0;
 }

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ToyotaFunClub'`, () => {
+  it(`should have as title 'photos-shop-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ToyotaFunClub');
+    expect(app.title).toEqual('photos-shop-app');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ToyotaFunClub app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('photos-shop-app app is running!');
   });
 });

@@ -1,0 +1,113 @@
+.search-result li {
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  width: 195px;
+  height: 16px;
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+  list-style-type: none;
+  visibility: hidden;
+}
+
+.search-result li:hover {
+  background-color: #607D8B;
+}
+
+.search-result li a {
+  color: #888;
+  text-decoration: none;
+  visibility: visible;
+}
+
+.search-result li a:hover {
+  color: white;
+}
+.search-result li a:active {
+  color: white;
+}
+
+
+#search-box {
+  width: 200px;
+  height: 30px;
+  border: none;
+  outline: none;
+}
+
+
+ul.search-result {
+  margin-top: 30px;
+  padding-left: 30px;
+  background-color: #222;
+  color: #fff;
+  width: 100%;
+  max-width: 170px;
+}
+
+
+.container-3{
+  width: 300px;
+  height: 200px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: absolute;
+  justify-content: right;
+  align-items: flex-end;
+  left: 30px;
+  top: 100px;
+}
+
+
+.container-3 input[type="search"]{
+  width: 300px;
+  height: 200px;
+  background: #2b303b;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #262626;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.container-3 input[type="search"]::-webkit-input-placeholder {
+  color: #65737e;
+}
+
+.container-3 input[type="search"]:-moz-placeholder { /* Firefox 18- */
+  color: #65737e;
+}
+
+.container-3 input[type="search"]::-moz-placeholder {  /* Firefox 19+ */
+  color: #65737e;
+}
+
+.container-3 input[type="search"]:-ms-input-placeholder {
+  color: #65737e;
+}
+
+
+.container-3 .icon{
+  position: absolute;
+  top: -10px;
+  margin-left: 17px;
+  margin-top: 17px;
+  z-index: 1;
+  color: #4f5b66;
+
+   -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -ms-transition: all .55s ease;
+  -o-transition: all .55s ease;
+  transition: all .55s ease;
+}
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

@@ -1,27 +1,44 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { User } from './User';
-import { USERS } from './users';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-
-  constructor() { }
+  private usersUrl = 'login'
+  constructor(
+    private http: HttpClient,
+  ) { }
 
   getUsers(): Observable<User[]> {
-    return of(USERS);
+    return this.http.get<User[]>(`http://localhost:8000/api/get/`)
+    .pipe(
+      catchError(this.handleError<User[]>('getUsers', []))
+    );
   }
 
-  getUser(username: String): Observable<User> {
-    return of(USERS.find(user => user.username === username));
+  // getUser(username: string): Observable<User> {
+  //   return of(users.find(user => user.username === username));
+  // }
+
+  getAll() {
+    return this.http.get<User[]>(`/users`);
+}
+
+  register(user: User) {
+    console.log(user)
+    return this.http.post(`http://localhost:8000/api/create/`, user);
+}
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+
+    console.error(error);
+
+    return of(result as T);
+    };
   }
 
-  register(user: User){
-    USERS.push(user);
-  }
-
-  
 }
