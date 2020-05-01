@@ -1,18 +1,27 @@
 <div class="login">
+  <!-- <div *ngIf="!logged"> -->
     <form action="" >
         <div class="imgcontainer">
           <h3>Login</h3>
         </div>
       
-        <div class="container">
+        <div class="container" *ngIf="!logged">
           <label for="uname" id="uname"><b>Username</b></label>
-          <input type="text" placeholder="Input your username" name="uname" required id="us">
-      
+          <input type="text" placeholder="Input your username" name="uname" required id="us" [(ngModel)]="username">
           <label for="psw" id="psw"><b>Password</b></label>
-          <input type="password" placeholder="Input your password" name="psw" required id="ps">
+          <input type="password" placeholder="Input your password" name="psw" required id="ps" [(ngModel)]="password">
           <form action="http://localhost:4200/cars" >
-            <button type="submit" onclick="alert('You are in the system!')">Log In</button>
+            <button type="submit" (click)="login()">Log In</button>
           </form>
+          <!-- <form action="http://localhost:4200/cars" >
+            <button type="submit" onclick="alert('You are in the system!')">Log In</button>
+          </form> -->
+
+          <div *ngIf="!logged">
+            <form action="http://localhost:4200/cars" >
+              <button type="submit" onclick="alert('You are in the system!')">View our Cars</button>
+            </form>
+          <!-- </div>
           
         </div>
       
@@ -20,5 +29,10 @@
           <span class="psw">New user? <a href="http://localhost:4200/signUp">Register</a></span>
           <span class="psw">  Forgot <a href="#">password?</a></span>
         </div>
-      </form>
-      </div>
+    </form>
+  <!-- </div> -->
+  <div *ngIf="logged">
+    <p>You are already logged!</p>
+    <button type="submit" (click)="logout()">Log out</button>
+  </div>
+</div>

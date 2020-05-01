@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
   constructor(private modelsService: ModelsService) { }
 
   ngOnInit() {
-    const token = localStorage.getItem('token');
+    console.log("I am in ngOnit")
+    let token = localStorage.getItem('token');
     if (token) {
       this.logged = true;
     }
@@ -27,6 +28,7 @@ export class LoginComponent implements OnInit {
     this.modelsService.login(this.username, this.password).subscribe(res => {
 
       localStorage.setItem('token', res.token);
+      console.log("I am here")
 
       this.logged = true;
 

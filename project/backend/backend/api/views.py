@@ -1,5 +1,5 @@
 from api.models import Model, Car, Basket
-from api.serializers import ModelsListSerializer, CarsListSerializer,  BasketSerializer
+from api.serializers import ModelsListSerializer, CarsListSerializer, ModelSerializer,  BasketSerializer
 from rest_framework import status, generics
 from rest_framework.decorators import api_view
 from rest_framework.views import APIView
@@ -23,6 +23,30 @@ def model(request, id):
         return Response({'error': serializer.errors})
     if request.method == 'DELETE':
         model.delete()
+        return Response({'deleted': True})
+
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def model_detail(request, id):
+    try:
+        model = Model.objects.get(id=id)
+    except Model.DoesNotExist as e:
+        return Response({'error': str(e)})
+
+    if request.method == 'GET':
+        serializer = ModelSerializer(model)
+        return Response(serializer.data)
+
+    elif request.method == 'PUT':
+        serializer = ModelSerializer(instance=model, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response({'error': serializer.errors})
+
+    elif request.method == 'DELETE':
+        model.delete()
+
         return Response({'deleted': True})
 
 
@@ -54,6 +78,11 @@ def car(request):
         return Response(serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+class CarListAPIView(generics.ListCreateAPIView):
+    queryset = Car.objects.all()
+    serializer_class = CarsListSerializer
+
+
 @api_view(['GET'])
 def cars_of_model(request, id):
     try:
@@ -64,6 +93,25 @@ def cars_of_model(request, id):
         cars = model.cars_set.all()
         serializer = CarsListSerializer(cars, many=True)
         return Response(serializer.data)
+
+
+@api_view(['GET', 'POST'])
+def car_by_model(request, pk):
+    try:
+        model = Model.objects.get(id=pk)
+    except Model.DoesNotExist as e:
+        return Response({'error': str(e)})
+
+    if request.method == 'GET':
+        serializer = CarsListSerializer(model.cars.all(), many=True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        serializer = CarsListSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response({'error': serializer.errors},
+                        status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class CarDetails(generics.RetrieveUpdateDestroyAPIView):
@@ -128,9 +176,3 @@ def carsByModel(request, id):
                 carsByModel.append(serializer.data)
         return Response(carsByModel)
 
-
-# class newCarsList(APIView):
-#     def get(self, request):
-#         cars_list = Car.objects.get_new_cars()
-#         serializer = CarsListSerializer(cars_list, many=True)
-#         return Response(serializer.data)

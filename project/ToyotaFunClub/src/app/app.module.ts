@@ -16,6 +16,7 @@ import { ProductServiceComponent } from './product-service/product-service.compo
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AuthInterceptor } from './auth.intercept';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule
   ],
